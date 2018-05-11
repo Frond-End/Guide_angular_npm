@@ -1,0 +1,48 @@
+NPM:
+
+https://allaravel.com/tutorials/quan-ly-thu-vien-lap-trinh/npm-la-cong-cu-gi/
+
+Install:
+local(c?c b?) and Global(toàn c?c)
+Có hai cách d? cài d?t m?t gói b?ng npm là cài d?t toàn c?c ho?c cài d?t c?c b?.
+
+Cài d?t c?c b? s? t?o ra thu m?c node_modules n?u chua có trong d? án ho?c n?u có r?i nó s? l?y mã ngu?n c?a gói c?n cài d?t dua vào dây, do dó khi c?n thi?t s? d?ng các gói này b?n có th? s? d?ng l?nh require().
+Cài d?t toàn c?c s? luu tr? mã ngu?n c?a gói trong các file h? th?ng không liên quan gì d?n thu m?c noi d?t d? án c?a b?n, không th? s? d?ng require() d? s? d?ng các gói mà ch? có th? dùng các gói này thông qua các hàm CLI (Command Line Interface).
+
+
+d? t?o file package.json :
+npm init: t?o file do b?n t? vi?t vào
+npm init --yes: t?o file m?u
+
+
+
+
+
+
+
+
+
+link:
+:chi ti?t v? package.json
+https://blog.duyet.net/2015/02/nodejs-packagejson-la-gi-vay.html#.WvVNmKSFPIU
+
+file: package-lock.json ???/
+
+Cái này theo mình bi?t là nó dùng d? lock version c?a các node modules.
+Vì sao c?n ph?i lock version?
+N?u b?n d? ý, sau khi install 1 module nào dó b?ng npm, thì trong file package.json s? thu?ng khai báo depedencies ki?u nhu ^1.0.0, vi?c này s? khi?n cho code deploy không ?n d?nh.
+Vì sao code deploy không ?n d?nh?
+Vì gi? s? hôm nay latest version c?a module này là 1.0.1 có tính nang x nhung ngày hôm sau module này update version lên 1.0.2 v?i tính nang x' thì vi?c deploy code c?a ngày hôm nay v?i hôm sau s? sai bi?t làm cho code ch?y không ?n d?nh. Chính vì v?y c?n có package-lock.json d? lock version làm cho vi?c deploy tr? nên ?n d?nh.
+
+include of package.json
+
+name: tên gói thu vi?n l?p trình
+version: phiên b?n gói
+description: ph?n mô t? v? gói thu vi?n
+homepage: trang ch? c?a gói
+author: tác gi?
+contributors: tên ngu?i dóng góp cho package
+dependencies: danh sách các gói ph? thu?c, t? d?ng du?c cài theo.
+repository: lo?i repository và url c?a package, thông thu?ng là git (Xem thêm Git là gì?)
+main: luôn luôn là index.js
+keywords: các t? khóa
