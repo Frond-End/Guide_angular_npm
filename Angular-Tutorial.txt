@@ -1,0 +1,22 @@
+ng serve --host 0.0.0.0 --port 4201
+doi port
+ng g c(component) components/loginpage   //tao ra 1 tn trong  muc ben trong app-> component(chua tat ca cac trang:laf tat ca cac componnet) ->loginpage(ts,css,html,spes(file tesst))
+ng g c loginpage   //tao truc tiep trong app .cach nay thif no auto import vao trong app.module.ts .nhung no k hieu qua neu ki project qua lon
+
+
+chuyen trang dung cau lenh
+this.router.navigate(['/user']);
+chuyen trang khi click
+ routerLink="/login"
+
+
+input  [(ngModel)]="username"  
+var a = this.username 
+khai bao biens a ddax lay duoc value tu input
+hoac truc tiep this.username
+   // "./node_module/boostrap/dirt/css/bootstrap.min.css" "./node_module/jquery/dirt/jquery.min.js"
+
+npm install bootstrap/jquery --save 
+cài/luu thu m?c bootstrap/jquery ve máy
+npm install g bootstrap/jquery 
+cài vào h? th?ng máy
